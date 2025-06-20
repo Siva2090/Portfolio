@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Calculator - Project Details</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #374151;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    .container {
+      max-width: 960px;
+      background: #fff;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    h2 {
+      color: #374151;
+      margin-top: 1.5rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+      line-height: 1.8;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .screenshot {
+      margin-top: 1.5rem;
+    }
+    .screenshot img {
+      max-width: 100%;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .github-link {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #111827;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .github-link:hover {
+      background-color: #4b5563;
+    }
+    pre {
+      background-color: #f0f0f0;
+      padding: 1rem;
+      overflow-x: auto;
+      border-left: 4px solid #374151;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🧮 JavaScript Calculator</h1>
+    <p>A Responsive Calculator using HTML, CSS & JavaScript</p>
+  </header>
+  <div class="container">
+    <h2>📖 Project Description</h2>
+    <p>
+      This is a clean and responsive calculator built using basic HTML, CSS, and JavaScript.
+      It simulates the functionality of a standard calculator, providing an intuitive user interface
+      and basic arithmetic operations.
+    </p>
+
+    <h2>🚀 Features</h2>
+    <ul>
+      <li>Basic operations: Addition, Subtraction, Multiplication, Division</li>
+      <li>AC (clear all), C (backspace), and Percentage functionality</li>
+      <li>Keyboard-like layout with simple design</li>
+      <li>Error handling for invalid input</li>
+      <li>Responsive layout and hover effects</li>
+    </ul>
+
+    <h2>🛠 Technologies Used</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript (Vanilla)</li>
+    </ul>
+
+    <h2>🧰 Tools</h2>
+    <ul>
+      <li>Visual Studio Code</li>
+      <li>Live Server Extension</li>
+    </ul>
+
+     <h2>💻 Project Code Snippet & Demo</h2>
+    <p>Below is a simple snippet demonstrating the JavaScript logic used in the calculator:</p>
+    <pre><code>
+// Example JavaScript snippet
+const buttons = document.querySelectorAll('button');
+const display = document.querySelector('.display');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const value = button.textContent;
+    if (value === 'AC') {
+      display.textContent = '';
+    } else if (value === '=') {
+      try {
+        display.textContent = eval(display.textContent);
+      } catch {
+        display.textContent = 'Error';
+      }
+    } else {
+      display.textContent += value;
+    }
+  });
+});
+    </code></pre>
+    <p>You can try the calculator demo directly in your local browser by opening the <code>index.html</code> file with Live Server.</p>
+
+
+    <h2>🖼️ Screenshots</h2>
+    <div class="screenshot">
+      <p><em>Upload your calculator screenshot and replace the image path below:</em></p>
+      <img src="https://github.com/Siva2090/Portfolio.git" alt="JavaScript Calculator Screenshot">
+      <img src="./asset/Screenshot 2025-06-18 223017.png" alt="JavaScript Calculator Screenshot">
+     <center> <img src="./asset/Screenshot 2025-06-18 223028.png" alt="JavaScript Calculator Screenshot"></center>
+    </div>
+
+   
+
+    <center><a class="github-link" href="https://github.com/Siva2090/My-codes-projects/tree/b6a3ec3f791fd359affd13289a6a07e0bd1ce95a/calculator" target="_blank">
+      📂 View on GitHub
+    </a></center>
+  </div>
+</body>
+</html>

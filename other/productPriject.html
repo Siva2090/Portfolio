@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Management System - Project Details</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #00695c;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .container {
+      max-width: 960px;
+      background: #fff;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    h2 {
+      color: #00695c;
+      margin-top: 1.5rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+      line-height: 1.6;
+    }
+    .screenshot img {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .github-link {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #24292e;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .github-link:hover {
+      background-color: #444;
+    }
+    p {
+      line-height: 1.6;
+    }
+    pre {
+      background-color: #f0f0f0;
+      padding: 1rem;
+      overflow-x: auto;
+      border-left: 4px solid #00695c;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📦 Product Management System</h1>
+    <p>Console-based Application using Java, JDBC, and MySQL</p>
+  </header>
+
+  <div class="container">
+    <h2>📖 Description</h2>
+    <p>
+      This Product Management System is a console-based application developed in Java
+      using JDBC and MySQL. It allows users to manage product inventory through a simple
+      command-line interface with options to insert, retrieve, update, and delete product records.
+    </p>
+
+    <h2>🚀 Features</h2>
+    <ul>
+      <li>📥 Add new products with ID, name, quantity, and price</li>
+      <li>🔎 Find products by ID</li>
+      <li>✏️ Update product price</li>
+      <li>🗑️ Delete product from database</li>
+      <li>📋 Menu-driven interface using Scanner</li>
+    </ul>
+
+    <h2>🛠 Technologies Used</h2>
+    <ul>
+      <li>Java</li>
+      <li>JDBC</li>
+      <li>MySQL</li>
+    </ul>
+
+    <h2>🧰 Tools</h2>
+    <ul>
+      <li>IntelliJ IDEA / Eclipse</li>
+      <li>MySQL Workbench / XAMPP</li>
+    </ul>
+
+    <h2>💻 Project Code Snippet & Demo</h2>
+    <p>Here is an example of how a product is inserted into the database:</p>
+    <pre><code>
+// Java JDBC Insert Example
+Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/productdb", "root", "password");
+PreparedStatement ps = con.prepareStatement("INSERT INTO products (id, name, quantity, price) VALUES (?, ?, ?, ?)");
+ps.setInt(1, 101);
+ps.setString(2, "Smartphone");
+ps.setInt(3, 50);
+ps.setDouble(4, 19999.00);
+int result = ps.executeUpdate();
+if(result > 0){
+    System.out.println("Product inserted successfully.");
+}
+    </code></pre>
+    <p>You can run this application using the terminal or console after connecting to your MySQL database.</p>
+
+    
+
+    <center><a class="github-link" href="https://github.com/Siva2090/My-codes-projects/tree/6063b59ae8891d58b933f84ae69509a5b5361e41/hibernatedemo" target="_blank">
+      📂 View Project on GitHub
+    </a></center>
+  </div>
+</body>
+</html>

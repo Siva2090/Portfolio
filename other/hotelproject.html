@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Reservation System - Project Details</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+
+    header {
+      background-color: #0b3d91;
+      color: #fff;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+      background-color: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-top: 2rem;
+      border-radius: 12px;
+    }
+
+    h2 {
+      color: #0b3d91;
+      margin-top: 1.5rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .screenshot {
+      margin-top: 1.5rem;
+    }
+
+    .screenshot img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .github-link {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #24292e;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .github-link:hover {
+      background-color: #444;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    pre {
+      background-color: #f0f0f0;
+      padding: 1rem;
+      overflow-x: auto;
+      border-left: 4px solid #0b3d91;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    code {
+      font-family: 'Courier New', Courier, monospace;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🏨 Hotel Reservation System</h1>
+    <p>Console-based Application using Java, JDBC, and MySQL</p>
+  </header>
+
+  <div class="container">
+    <h2>📖 Description</h2>
+    <p>
+      The Hotel Reservation System is a backend-focused Java console application
+      that enables hotel staff to manage room reservations with ease. It uses JDBC for
+      database operations and supports all basic CRUD functionality.
+    </p>
+
+    <h2>🚀 Features</h2>
+    <ul>
+      <li>📥 Reserve a room with guest details</li>
+      <li>📋 View all reservations in a clean table format</li>
+      <li>🔍 Retrieve a room number by guest ID and name</li>
+      <li>✏️ Update reservation records</li>
+      <li>🗑️ Delete reservations securely</li>
+    </ul>
+
+    <h2>🛠 Technologies Used</h2>
+    <ul>
+      <li>Java</li>
+      <li>JDBC (Java Database Connectivity)</li>
+      <li>MySQL (Database)</li>
+    </ul>
+
+    <h2>🧰 Tools</h2>
+    <ul>
+      <li>Eclipse IDE / IntelliJ IDEA</li>
+      <li>XAMPP / MySQL Workbench</li>
+    </ul>
+
+    <h2>💻 Project Code Snippet & Demo</h2>
+    <p>Here is a sample code snippet for inserting reservation data using JDBC:</p>
+    <pre><code>
+// Java JDBC Insert Example
+Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel", "root", "password");
+PreparedStatement ps = con.prepareStatement("INSERT INTO reservations (guest_name, room_no, checkin, checkout) VALUES (?, ?, ?, ?)");
+ps.setString(1, "John Doe");
+ps.setInt(2, 101);
+ps.setDate(3, Date.valueOf("2025-06-20"));
+ps.setDate(4, Date.valueOf("2025-06-25"));
+int result = ps.executeUpdate();
+if (result > 0) {
+    System.out.println("Reservation successful!");
+}
+    </code></pre>
+    <p>You can test this on a local MySQL setup by creating the relevant table and running the console application.</p>
+
+    <h2>🖼️ Screenshots</h2>
+    <div class="screenshot">
+      <p><em>Upload your screenshots and update the image path below:</em></p>
+      <img src="./asset/Screenshot 2025-06-18 213546.png" alt="Hotel Reservation System Screenshot">
+      <img src="./asset/Screenshot 2025-06-18 213713.png" alt="Hotel Reservation System Screenshot">
+      <img src="./asset/Screenshot 2025-06-18 213753.png" alt="Hotel Reservation System Screenshot">
+    </div>
+
+    <center><a class="github-link" href="https://github.com/Siva2090/My-codes-projects/tree/b6a3ec3f791fd359affd13289a6a07e0bd1ce95a/Hotel%20reservation%20system" target="_blank">
+      📂 View Project on GitHub
+    </a></center>
+  </div>
+</body>
+</html>
+
